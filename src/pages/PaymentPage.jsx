@@ -3,7 +3,6 @@ import { useSearchParams, useNavigate } from 'react-router-dom';
 import { Lock, ShieldCheck, CreditCard, Calendar, CheckCircle, Loader2 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import CTASection from '../components/CTASection';
 
 const offers = {
   diagnostic: { name: 'Diagnostic', price: 99 }
@@ -399,7 +398,6 @@ const PaymentPage = () => {
               </div>
             </div>
           </section>
-          <CTASection />
         </main>
         <Footer />
       </div>
