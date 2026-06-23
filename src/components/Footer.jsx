@@ -128,7 +128,7 @@ const Footer = () => {
                 <img src="/Frame 1000001360.svg" alt="DroitHabitat" style={{ height: '30px', width: 'auto' }} />
               </a>
               <p className="footer-tagline">
-                La solution experte pour analyser et agir sur vos litiges de crédit à la consommation.
+                Droit Habitat aide les particuliers à reprendre le contrôle de leur dossier après signature.
               </p>
             </div>
             

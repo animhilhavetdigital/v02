@@ -7,23 +7,27 @@ const FAQSection = () => {
   const faqs = [
     {
       q: 'Le test est-il vraiment gratuit ?',
-      a: 'Oui, et il le restera.'
+      a: 'Oui. Le test sert à vérifier si votre situation semble entrer dans le périmètre Droit Habitat et quelle voie peut être envisagée ensuite.'
     },
     {
-      q: 'Combien coûte une médiation ?',
-      a: 'Le prix vous est révélé après le test, si vous êtes éligible.'
+      q: 'Êtes-vous avocats ?',
+      a: "Non. Droit Habitat n'est pas un cabinet d'avocats. Notre rôle est de qualifier, structurer et préparer le dossier. Si une intervention avocat devient nécessaire, un relais peut être organisé avec un avocat partenaire."
     },
     {
-      q: 'Puis-je agir seul après le diagnostic ?',
-      a: 'Absolument. Le pack de preuves est conçu pour ça.'
+      q: 'Garantissez-vous l\'annulation du crédit ?',
+      a: 'Non. Nous ne garantissons pas l\'annulation d\'un crédit. Nous faisons ressortir les irrégularités potentielles, structurons les preuves et préparons un dossier exploitable pour agir par la bonne voie.'
     },
     {
-      q: 'Qu\'est-ce qui rend mon dossier éligible ?',
-      a: 'Démarchage, vente à domicile, délais non respectés...'
+      q: 'Que se passe-t-il si mon dossier est incomplet ?',
+      a: 'Nous identifions les pièces manquantes et vous demandons les compléments utiles. Plus le dossier est complet, plus l\'analyse peut être exploitable.'
     },
     {
-      q: 'Combien de temps dure une médiation ?',
-      a: 'En moyenne 3 à 6 semaines.'
+      q: 'Que contient l\'offre à 99 EUR ?',
+      a: 'L\'offre 1 comprend l\'analyse du dossier après signature, la chronologie structurée, les irrégularités potentielles, un mémoire structuré, un dossier PDF exploitable et un courrier prêt à envoyer.'
+    },
+    {
+      q: 'Que se passe-t-il s\'il n\'y a pas matière à agir ?',
+      a: 'Vous recevez une explication claire des limites identifiées à ce stade, ainsi que les éléments manquants ou les raisons pour lesquelles le dossier ne semble pas exploitable.'
     }
   ];
 

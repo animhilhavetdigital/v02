@@ -3,55 +3,39 @@ import React from 'react';
 const TestimonialsSection = () => {
   const row1 = [
     {
-      name: 'Marc Dubois',
-      role: 'Client - Crédit Auto',
-      text: "Grâce à Droit Habitat, j'ai pu faire analyser mon crédit auto. Ils ont détecté des irrégularités majeures et j'ai été remboursé de plus de 3 200 € !",
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80'
+      text: "Je pensais surtout qu'il était trop tard. J'avais besoin de comprendre ce que j'avais signé et quoi faire ensuite.",
+      author: "Retour utilisateur"
     },
     {
-      name: 'Sophie Lambert',
-      role: 'Client - Prêt Conso',
-      text: "La plateforme est d'une simplicité enfantine. En 2 minutes, le diagnostic était posé. Les experts ont ensuite pris les choses en main avec un succès total.",
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80'
+      text: "Grâce à Droit Habitat, j'ai pu faire analyser mon crédit conso. Ils ont détecté des irrégularités majeures !",
+      author: "Retour utilisateur"
     },
     {
-      name: 'Thomas Martin',
-      role: 'Courtier - Partenaire',
-      text: "Je recommande vivement. Taux de réussite impressionnant et accompagnement de A à Z. Mon conseiller attitré a été formidable tout au long de la procédure.",
-      avatar: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=100&q=80'
+      text: "La plateforme est d'une simplicité enfantine. En 2 minutes, le diagnostic était posé.",
+      author: "Retour utilisateur"
     },
     {
-      name: 'Camille Roussel',
-      role: 'Client - Litige Banque',
-      text: "Un gain de temps incroyable. J'étais noyée sous la paperasse avec ma banque. Droit Habitat a tout pris en charge et réglé la situation en un temps record.",
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80'
+      text: "Je ne cherchais pas une promesse miracle. Je voulais un dossier clair, des preuves en ordre et une direction.",
+      author: "Retour utilisateur"
     }
   ];
 
   const row2 = [
     {
-      name: 'Antoine Voisin',
-      role: 'Client - Crédit Conso',
-      text: "Enfin un service honnête, rapide et transparent. L'IA est bluffante de précision. Une vraie révolution dans la gestion des litiges financiers.",
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80'
+      text: "Entre le vendeur, l'organisme de crédit, les courriers et les prélèvements, je ne savais plus où regarder. Le dossier a remis de l'ordre.",
+      author: "Retour utilisateur"
     },
     {
-      name: 'Elodie Perez',
-      role: 'Client - Prêt Travaux',
-      text: "Très sceptique au début, mais les résultats sont là : 4 500 € récupérés sur mon prêt travaux grâce à leurs analyses minutieuses. Merci !",
-      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80'
+      text: "Enfin un service honnête, rapide et transparent. L'IA est bluffante de précision.",
+      author: "Retour utilisateur"
     },
     {
-      name: 'Karim Bensalah',
-      role: 'CGP - Partenaire',
-      text: "Un service client réactif et extrêmement professionnel. Le rapport d'anomalies détaillé m'a permis de négocier sereinement face à ma banque.",
-      avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&q=80'
+      text: "Un gain de temps incroyable. J'étais noyée sous la paperasse avec ma banque.",
+      author: "Retour utilisateur"
     },
     {
-      name: 'Sarah Dupuis',
-      role: 'Client - Crédit Auto',
-      text: "Une équipe d'experts à l'écoute et très rigoureuse. La procédure a été rapide, transparente, et sans aucun frais caché. Je recommande !",
-      avatar: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=100&q=80'
+      text: "Une équipe d'experts à l'écoute et très rigoureuse. La procédure a été rapide et transparente.",
+      author: "Retour utilisateur"
     }
   ];
 
@@ -112,7 +96,7 @@ const TestimonialsSection = () => {
           .testimonial-card {
             width: 380px;
             background: rgba(10, 18, 38, 0.45);
-            border: 1px solid rgba(120, 170, 255, 0.1);
+            border: 1px solid rgba(209, 180, 140, 0.15);
             border-radius: 20px;
             padding: 28px;
             display: flex;
@@ -125,47 +109,41 @@ const TestimonialsSection = () => {
           }
 
           .testimonial-card:hover {
-            border-color: rgba(120, 170, 255, 0.3);
+            border-color: rgba(209, 180, 140, 0.4);
             transform: translateY(-4px) scale(1.01);
-            background: rgba(10, 18, 38, 0.65);
+            background: rgba(10, 18, 38, 0.6);
           }
 
           .testimonial-text {
-            font-size: 14px;
+            font-size: 14.5px;
             line-height: 1.65;
-            color: rgba(226, 232, 255, 0.8);
-            margin-bottom: 24px;
+            color: rgba(226, 232, 255, 0.85);
+            font-style: italic;
+            margin-bottom: 20px;
           }
 
-          .testimonial-user {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-          }
-
-          .testimonial-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid rgba(120, 170, 255, 0.25);
-          }
-
-          .user-info {
-            display: flex;
-            flex-direction: column;
-          }
-
-          .user-name {
-            font-size: 14px;
+          .testimonial-author {
+            font-size: 11.5px;
             font-weight: 600;
-            color: #fff;
+            color: #D1B48C;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
           }
 
-          .user-role {
-            font-size: 11px;
-            color: rgba(226, 232, 255, 0.45);
-            margin-top: 1px;
+          .confidence-line {
+            text-align: center;
+            font-size: 14.5px;
+            color: rgba(226, 232, 255, 0.7);
+            font-weight: 500;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 30px;
+            margin-top: 60px;
+            letter-spacing: 0.02em;
+          }
+
+          .confidence-line span {
+            color: #D1B48C;
+            font-weight: 600;
           }
 
           /* Left and Right blur overlays to fade out marquee edges */
@@ -204,6 +182,10 @@ const TestimonialsSection = () => {
             .testimonial-text {
               font-size: 13px;
             }
+
+            .testimonials-section {
+              padding: 72px 0;
+            }
           }
 
           @media (max-width: 480px) {
@@ -218,16 +200,7 @@ const TestimonialsSection = () => {
               margin-bottom: 18px;
             }
 
-            .testimonial-avatar {
-              width: 34px;
-              height: 34px;
-            }
-
-            .user-name {
-              font-size: 13px;
-            }
-
-            .user-role {
+            .testimonial-author {
               font-size: 10px;
             }
           }
@@ -236,25 +209,20 @@ const TestimonialsSection = () => {
       <section className="testimonials-section section-glow">
         <div className="container">
           <div className="section-heading centered">
-            <h2>Ce Que Disent Nos Clients</h2>
-            <p>Découvrez comment nos clients transforment leur situation grâce à des solutions avancées.</p>
+            <h2>Vous n'êtes pas seul à vivre ça</h2>
+            <p style={{ maxWidth: '720px', margin: '16px auto 0' }}>
+              La plupart des personnes qui arrivent ici ne cherchent pas un grand discours. Elles veulent comprendre ce qu'elles ont signé, ce qui est encore possible et comment arrêter de subir seules.
+            </p>
           </div>
         </div>
 
         <div className="marquee-container">
           {/* Row 1: Scrolling Left */}
           <div className="marquee-track scroll-left">
-            {/* Render items twice for seamless infinite loop */}
             {[...row1, ...row1].map((t, idx) => (
               <div key={idx} className="testimonial-card">
                 <div className="testimonial-text">"{t.text}"</div>
-                <div className="testimonial-user">
-                  <img src={t.avatar} alt={t.name} className="testimonial-avatar" />
-                  <div className="user-info">
-                    <span className="user-name">{t.name}</span>
-                    <span className="user-role">{t.role}</span>
-                  </div>
-                </div>
+                <div className="testimonial-author">{t.author}</div>
               </div>
             ))}
           </div>
@@ -264,15 +232,15 @@ const TestimonialsSection = () => {
             {[...row2, ...row2].map((t, idx) => (
               <div key={idx} className="testimonial-card">
                 <div className="testimonial-text">"{t.text}"</div>
-                <div className="testimonial-user">
-                  <img src={t.avatar} alt={t.name} className="testimonial-avatar" />
-                  <div className="user-info">
-                    <span className="user-name">{t.name}</span>
-                    <span className="user-role">{t.role}</span>
-                  </div>
-                </div>
+                <div className="testimonial-author">{t.author}</div>
               </div>
             ))}
+          </div>
+        </div>
+
+        <div className="container">
+          <div className="confidence-line">
+            <span>Clarté, méthode, cadre et orientation.</span> Pas de promesse excessive.
           </div>
         </div>
       </section>

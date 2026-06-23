@@ -181,11 +181,11 @@ const SolutionSection = () => {
           }
         `}
       </style>
-      <section className="section">
+      <section id="comment-ca-marche" className="section">
         <div className="container">
           <div className="section-heading centered">
             <h2>Votre solution en 2 minutes</h2>
-            <p>Notre test gratuit analyse instantanément votre dossier et vous dit si vous pouvez récupérer vos droits. Gratuit, sans engagement, 100% en ligne.</p>
+            <p>En quelques réponses, nous vérifions si votre situation entre dans le périmètre Droit Habitat et quelle voie semble la plus adaptée : comprendre, contester, engager une médiation amiable ou préparer une escalade si nécessaire.</p>
           </div>
           
           <div className="process-wrapper">
@@ -194,8 +194,8 @@ const SolutionSection = () => {
                 <BrainCircuit size={32} />
               </div>
               <div className="step-info">
-                <h3 className="step-title">Analyse IA 2.0</h3>
-                <p className="step-desc">Notre intelligence artificielle scanne votre contrat et identifie instantanément les failles juridiques exploitables.</p>
+                <h3 className="step-title">Qualification rapide</h3>
+                <p className="step-desc">Vous décrivez votre situation, vos prélèvements, vos relances et les documents déjà en votre possession.</p>
               </div>
             </div>
 
@@ -206,8 +206,8 @@ const SolutionSection = () => {
                 <TrendingUp size={32} />
               </div>
               <div className="step-info">
-                <h3 className="step-title">98% Taux de réussite</h3>
-                <p className="step-desc">Pour les dossiers jugés éligibles par notre système, nous constatons un taux de succès exceptionnel (+12% par rapport à la moyenne).</p>
+                <h3 className="step-title">Analyse structurée</h3>
+                <p className="step-desc">Notre système réorganise les informations utiles pour faire ressortir les irrégularités potentielles et les pièces manquantes.</p>
               </div>
             </div>
 
@@ -218,8 +218,8 @@ const SolutionSection = () => {
                 <CheckCircle size={32} />
               </div>
               <div className="step-info">
-                <h3 className="step-title">Expert : Dossier éligible</h3>
-                <p className="step-desc">Obtenez une réponse claire et ferme sur la viabilité de votre dossier avant même d'engager la moindre démarche.</p>
+                <h3 className="step-title">Orientation claire</h3>
+                <p className="step-desc">Vous savez si votre dossier semble exploitable et quelle suite envisager : agir seul, engager une médiation amiable ou préparer un relais avocat si besoin.</p>
               </div>
             </div>
           </div>

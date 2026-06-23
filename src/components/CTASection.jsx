@@ -47,14 +47,34 @@ const CTASection = () => {
       </style>
       <section className="cta-section section-glow">
         <div className="container">
-          <div className="cta-content">
-            <h2 className="cta-title">
-              <span className="cta-line">Prêt à savoir si votre</span>
-              <span className="cta-line">dossier vaut le coup ?</span>
-            </h2>
+          <div className="cta-content" style={{ maxWidth: '720px' }}>
+            <h2 className="cta-title">Vous ne subissez plus seul</h2>
+            <p style={{ marginBottom: '32px', color: 'rgba(226, 232, 255, 0.85)', fontSize: '16px', lineHeight: '1.65' }}>
+              Commencez par remettre votre dossier en ordre. Droit Habitat vous aide à comprendre votre situation, structurer vos preuves et choisir la bonne suite.
+            </p>
             <button className="btn-cta" onClick={scrollToChat}>
-              Faire le test gratuit
+              Démarrer mon dossier
             </button>
+
+            {/* Reassurance Bar */}
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', flexWrap: 'wrap', marginTop: '40px', color: 'rgba(226, 232, 255, 0.6)', fontSize: '13.5px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{ width: '6px', height: '6px', backgroundColor: '#D1B48C', borderRadius: '50%' }}></span>
+                Confidentiel et sécurisé
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{ width: '6px', height: '6px', backgroundColor: '#D1B48C', borderRadius: '50%' }}></span>
+                France uniquement
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{ width: '6px', height: '6px', backgroundColor: '#D1B48C', borderRadius: '50%' }}></span>
+                Après signature
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{ width: '6px', height: '6px', backgroundColor: '#D1B48C', borderRadius: '50%' }}></span>
+                Accompagnement structuré
+              </div>
+            </div>
           </div>
         </div>
       </section>

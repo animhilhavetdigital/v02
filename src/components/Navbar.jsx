@@ -7,6 +7,15 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 
+  const handleCtaClick = () => {
+    const el = document.getElementById('chat-test');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      window.location.href = '/#chat-test';
+    }
+  };
+
   return (
     <>
       <style>
@@ -178,31 +187,7 @@ const Navbar = () => {
             }
           }
 
-          @media (max-width: 400px) {
-            .navbar {
-              height: 48px;
-              padding: 0 16px;
-              gap: 18px;
-            }
-
-            .nav-brand img {
-              height: 24px;
-            }
-
-            .nav-links {
-              gap: 10px;
-            }
-
-            .nav-links a {
-              font-size: 11px;
-            }
-
-            .mobile-menu {
-              top: 72px;
-            }
-          }
-
-          @media (max-width: 340px) {
+          @media (max-width: 440px) {
             .nav-links {
               display: none;
             }
@@ -233,6 +218,13 @@ const Navbar = () => {
           <a href="/">Accueil</a>
           <a href="/faq">FAQ</a>
           <a href="/contact">Contact</a>
+          <button 
+            className="btn-primary" 
+            style={{ height: '36px', minHeight: '36px', padding: '0 16px', fontSize: '13px', marginLeft: '8px' }}
+            onClick={handleCtaClick}
+          >
+            Faire le test gratuit
+          </button>
         </div>
 
         <button className="nav-mobile-btn" onClick={toggleMenu} aria-label="Menu">
@@ -245,6 +237,13 @@ const Navbar = () => {
         <a href="/" onClick={closeMenu}>Accueil</a>
         <a href="/faq" onClick={closeMenu}>FAQ</a>
         <a href="/contact" onClick={closeMenu}>Contact</a>
+        <button 
+          className="btn-primary" 
+          style={{ width: '100%', marginTop: '10px', height: '42px', minHeight: '42px' }} 
+          onClick={() => { closeMenu(); handleCtaClick(); }}
+        >
+          Faire le test gratuit
+        </button>
       </div>
     </>
   );

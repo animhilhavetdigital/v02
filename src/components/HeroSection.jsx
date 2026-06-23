@@ -91,24 +91,24 @@ const HeroSection = () => {
           }
 
           .hero-content h1 {
-            font-size: clamp(34px, 6.5vw, 76px);
-            line-height: 1.05;
-            letter-spacing: -0.035em;
-            margin-bottom: 24px;
+            font-size: clamp(30px, 4.5vw, 48px);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
           }
 
           @media (max-width: 480px) {
             .hero-content h1 {
-              font-size: clamp(28px, 10vw, 34px);
+              font-size: clamp(24px, 8vw, 30px);
             }
           }
 
           .hero-content p {
-            font-size: 17px;
+            font-size: 15px;
             line-height: 1.6;
             color: rgba(226, 232, 255, 0.8);
-            margin-bottom: 36px;
-            max-width: 480px;
+            margin-bottom: 28px;
+            max-width: 450px;
           }
 
           .hero-actions {
@@ -278,40 +278,64 @@ const HeroSection = () => {
         `}
       </style>
       <section className="hero">
-        {/* Floating tags - Reduced to 5, made larger, closer to text */}
+        {/* Floating tags - Updated to match consumer credit issues */}
         <div className="floating-tag tag-1">
           <span className="tag-dot red"></span>
-          Taux d'intérêt trop élevés
+          Signature à domicile
         </div>
         <div className="floating-tag tag-2">
           <span className="tag-dot red"></span>
-          Crédits immobiliers
+          Prélèvements abusifs
         </div>
         <div className="floating-tag tag-3">
           <span className="tag-dot red"></span>
-          Dettes multiples
+          Mise en demeure
         </div>
         <div className="floating-tag tag-4">
           <span className="tag-dot red"></span>
-          Assurances coûteuses
+          Pression commerciale
         </div>
         <div className="floating-tag tag-5">
           <span className="tag-dot red"></span>
-          Courriers envoyés
+          Fichage FICP
         </div>
 
         <div className="hero-container">
           <div className="hero-content">
             <div className="hero-top">
-              <h1>Le crédit vous<br /><span>étouffe ?</span></h1>
+              <div className="eyebrow">
+                <span className="eyebrow-dot"></span>
+                APRES LA SIGNATURE, TOUT COMMENCE PAR UNE QUESTION
+              </div>
+              <h1>Vous avez signé un crédit conso et quelque chose cloche ?</h1>
               <p>
-                Droit Habitat transforme la complexité du crédit en solutions concrètes et actionnables.
+                Prélèvements, relances, documents flous, pression commerciale, peur qu'il soit trop tard... Droit Habitat analyse votre dossier après signature, remet vos preuves en ordre et vous aide à savoir s'il y a matière à agir.
               </p>
             </div>
+            
             <div className="hero-bottom">
+              {/* Reassurance elements */}
+              <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', marginBottom: '8px', color: 'rgba(226, 232, 255, 0.7)', fontSize: '13px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span style={{ width: '6px', height: '6px', backgroundColor: '#D1B48C', borderRadius: '50%' }}></span>
+                  France uniquement
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span style={{ width: '6px', height: '6px', backgroundColor: '#D1B48C', borderRadius: '50%' }}></span>
+                  Intervention après signature
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span style={{ width: '6px', height: '6px', backgroundColor: '#D1B48C', borderRadius: '50%' }}></span>
+                  Dossier exploitable en 72h pour l'offre 1
+                </div>
+              </div>
+
               <div className="hero-actions">
                 <button className="btn-cta" onClick={() => document.getElementById('chat-test')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}>
-                  Faire le test gratuit <ArrowRight size={16} style={{ marginLeft: '8px' }} />
+                  Faire analyser mon dossier <ArrowRight size={16} style={{ marginLeft: '8px' }} />
+                </button>
+                <button className="btn-primary" onClick={() => document.getElementById('comment-ca-marche')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}>
+                  Voir comment ça fonctionne
                 </button>
               </div>
               <div className="social-proof">
