@@ -1,83 +1,16 @@
 import React from 'react';
 import { Mail, Phone, ArrowUp } from 'lucide-react';
+import CTASection from './CTASection';
 
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const scrollToChat = () => {
-    document.getElementById('chat-test')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  };
-
   return (
     <>
       <style>
         {`
-          .cta-section {
-            padding: 100px 0;
-            text-align: center;
-            position: relative;
-          }
-
-          .cta-content {
-            max-width: 600px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-          }
-
-          .cta-title {
-            margin-bottom: 32px;
-            text-align: center;
-          }
-
-          .cta-line {
-            display: block;
-            white-space: nowrap;
-          }
-
-          @media (max-width: 480px) {
-            .cta-section {
-              padding: 72px 0;
-            }
-
-            .cta-title {
-              margin-bottom: 24px;
-            }
-
-            .cta-line {
-              white-space: normal;
-            }
-
-            .footer {
-              padding: 60px 0 32px;
-            }
-
-            .footer-grid {
-              gap: 32px;
-              text-align: center;
-            }
-
-            .footer-brand {
-              display: inline-flex;
-              margin-bottom: 12px;
-            }
-
-            .footer-tagline {
-              max-width: 100%;
-              font-size: 13px;
-            }
-
-            .footer-col h4 {
-              margin-bottom: 16px;
-            }
-
-            .footer-links a {
-              justify-content: center;
-            }
-          }
-
           .footer {
             border-top: 1px solid rgba(255,255,255,0.06);
             padding: 80px 0 40px;
@@ -151,9 +84,34 @@ const Footer = () => {
           }
 
           @media (max-width: 600px) {
+            .footer {
+              padding: 60px 0 32px;
+            }
+
             .footer-grid {
               grid-template-columns: 1fr;
+              gap: 32px;
+              text-align: center;
             }
+
+            .footer-brand {
+              display: inline-flex;
+              margin-bottom: 12px;
+            }
+
+            .footer-tagline {
+              max-width: 100%;
+              font-size: 13px;
+            }
+
+            .footer-col h4 {
+              margin-bottom: 16px;
+            }
+
+            .footer-links a {
+              justify-content: center;
+            }
+
             .footer-bottom {
               flex-direction: column;
               gap: 16px;
@@ -163,28 +121,14 @@ const Footer = () => {
         `}
       </style>
 
-      {/* CTA Section */}
-      <section className="cta-section section-glow">
-        <div className="container">
-          <div className="cta-content">
-            <h2 className="cta-title">
-              <span className="cta-line">Prêt à savoir si votre</span>
-              <span className="cta-line">dossier vaut le coup ?</span>
-            </h2>
-            <button className="btn-cta" onClick={scrollToChat}>
-              Faire le test gratuit
-            </button>
-          </div>
-        </div>
-      </section>
+      <CTASection />
 
-      {/* Footer */}
       <footer className="footer">
         <div className="container">
           <div className="footer-grid">
             <div className="footer-col">
               <a href="/" className="footer-brand" style={{ display: 'inline-flex', alignItems: 'center', marginBottom: '16px' }}>
-                <img src="/logo.svg" alt="DroitHabitat" style={{ height: '30px', width: 'auto' }} />
+                <img src="/Frame 1000001360.svg" alt="DroitHabitat" style={{ height: '30px', width: 'auto' }} />
               </a>
               <p className="footer-tagline">
                 La solution experte pour analyser et agir sur vos litiges de crédit à la consommation.
@@ -200,7 +144,7 @@ const Footer = () => {
                 <a href="/legal">Mentions légales</a>
               </div>
             </div>
-
+            
             <div className="footer-col">
               <h4>Nous contacter</h4>
               <div className="footer-links">
@@ -212,17 +156,17 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-
+            
             <div className="footer-col">
               <h4>Suivez-nous</h4>
               <div className="footer-links">
-                <a href="#">LinkedIn</a>
                 <a href="#">Facebook</a>
                 <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
               </div>
             </div>
           </div>
-
+          
           <div className="footer-bottom">
             <div>© {new Date().getFullYear()} DroitHabitat. Tous droits réservés.</div>
             <button 

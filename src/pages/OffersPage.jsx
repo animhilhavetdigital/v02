@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { Check, ShieldCheck, Sparkles, Lock, RefreshCcw } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import CTASection from '../components/CTASection';
 
 const OffersPage = () => {
   const navigate = useNavigate();
@@ -252,6 +253,7 @@ const OffersPage = () => {
               </div>
             </div>
           </section>
+          <CTASection />
         </main>
         <Footer />
       </div>
