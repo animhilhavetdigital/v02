@@ -6,6 +6,10 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const scrollToChat = () => {
+    document.getElementById('chat-test')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
   return (
     <>
       <style>
@@ -23,6 +27,57 @@ const Footer = () => {
             z-index: 2;
           }
 
+          .cta-title {
+            margin-bottom: 32px;
+            text-align: center;
+          }
+
+          .cta-line {
+            display: block;
+            white-space: nowrap;
+          }
+
+          @media (max-width: 480px) {
+            .cta-section {
+              padding: 72px 0;
+            }
+
+            .cta-title {
+              margin-bottom: 24px;
+            }
+
+            .cta-line {
+              white-space: normal;
+            }
+
+            .footer {
+              padding: 60px 0 32px;
+            }
+
+            .footer-grid {
+              gap: 32px;
+              text-align: center;
+            }
+
+            .footer-brand {
+              display: inline-flex;
+              margin-bottom: 12px;
+            }
+
+            .footer-tagline {
+              max-width: 100%;
+              font-size: 13px;
+            }
+
+            .footer-col h4 {
+              margin-bottom: 16px;
+            }
+
+            .footer-links a {
+              justify-content: center;
+            }
+          }
+
           .footer {
             border-top: 1px solid rgba(255,255,255,0.06);
             padding: 80px 0 40px;
@@ -37,10 +92,10 @@ const Footer = () => {
           }
 
           .footer-brand {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 24px;
             font-weight: 600;
-            color: #fff;
+            color: #D1B48C;
             margin-bottom: 16px;
             display: block;
           }
@@ -112,9 +167,12 @@ const Footer = () => {
       <section className="cta-section section-glow">
         <div className="container">
           <div className="cta-content">
-            <h2 style={{marginBottom: '32px'}}>Prêt à savoir si votre dossier vaut le coup ?</h2>
-            <button className="btn-primary" onClick={scrollToTop}>
-              Faire le test gratuit — ça prend 2 min
+            <h2 className="cta-title">
+              <span className="cta-line">Prêt à savoir si votre</span>
+              <span className="cta-line">dossier vaut le coup ?</span>
+            </h2>
+            <button className="btn-cta" onClick={scrollToChat}>
+              Faire le test gratuit
             </button>
           </div>
         </div>

@@ -82,6 +82,21 @@ const FAQSection = () => {
             from { opacity: 0; transform: translateY(-4px); }
             to { opacity: 1; transform: translateY(0); }
           }
+
+          @media (max-width: 480px) {
+            .accordion-item {
+              padding: 18px 0;
+            }
+
+            .accordion-title {
+              font-size: 14px;
+              gap: 16px;
+            }
+
+            .accordion-content {
+              font-size: 13px;
+            }
+          }
         `}
       </style>
       <section className="section section-tight">

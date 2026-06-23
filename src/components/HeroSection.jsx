@@ -52,45 +52,55 @@ const HeroSection = () => {
             align-items: flex-start;
           }
 
+          .hero-top {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          .hero-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+          }
+
           .eyebrow {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: #6EA8FF;
+            color: #E8D4B8;
             font-size: 11px;
             font-weight: 600;
             letter-spacing: 0.15em;
             text-transform: uppercase;
             margin-bottom: 24px;
-            background: rgba(37, 99, 255, 0.1);
+            background: rgba(209, 180, 140, 0.1);
             padding: 6px 16px;
             border-radius: 999px;
-            border: 1px solid rgba(37, 99, 255, 0.2);
-            box-shadow: 0 0 15px rgba(37, 99, 255, 0.1);
+            border: 1px solid rgba(209, 180, 140, 0.25);
+            box-shadow: 0 0 15px rgba(209, 180, 140, 0.1);
           }
 
           .eyebrow-dot {
             width: 6px;
             height: 6px;
-            background-color: #2563FF;
+            background-color: #D1B48C;
             border-radius: 50%;
-            box-shadow: 0 0 8px #2563FF;
+            box-shadow: 0 0 8px #D1B48C;
           }
 
           .hero-content h1 {
-            font-size: clamp(48px, 6.5vw, 76px);
-            line-height: 1.0;
+            font-size: clamp(34px, 6.5vw, 76px);
+            line-height: 1.05;
             letter-spacing: -0.035em;
             margin-bottom: 24px;
-            font-family: 'Cormorant Garamond', serif;
-            color: #F4F7FF;
           }
 
-          .hero-content h1 span {
-            color: #6EA8FF;
-            background: linear-gradient(135deg, #6EA8FF 0%, #2563FF 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+          @media (max-width: 480px) {
+            .hero-content h1 {
+              font-size: clamp(28px, 10vw, 34px);
+            }
           }
 
           .hero-content p {
@@ -111,17 +121,17 @@ const HeroSection = () => {
           /* Floating Glowing Tags */
           .floating-tag {
             position: absolute;
-            background: rgba(10, 18, 38, 0.75);
-            border: 1px solid rgba(255, 75, 75, 0.25);
-            border-radius: 10px;
-            padding: 10px 18px;
-            font-size: 13px;
+            background: rgba(2, 6, 17, 0.65);
+            border: 1px solid rgba(209, 180, 140, 0.35);
+            border-radius: 999px;
+            padding: 10px 20px;
+            font-size: 12px;
             font-weight: 600;
-            color: #F4F7FF;
+            color: #E8D4B8;
             display: flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 75, 75, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 20px rgba(209, 180, 140, 0.12);
             backdrop-filter: blur(8px);
             z-index: 5;
             white-space: nowrap;
@@ -137,8 +147,8 @@ const HeroSection = () => {
           }
 
           .tag-dot.red {
-            background-color: #FF4B4B;
-            box-shadow: 0 0 10px #FF4B4B;
+            background-color: #D1B48C;
+            box-shadow: 0 0 10px #D1B48C;
           }
 
           /* Floating animations */
@@ -206,36 +216,63 @@ const HeroSection = () => {
           @media (max-width: 768px) {
             .hero {
               background-image: 
-                linear-gradient(to bottom, rgba(2, 6, 17, 0.95) 40%, rgba(2, 6, 17, 0.8) 70%, #020611 100%),
-                url('/person-img.jpeg');
-              background-position: center top;
+                linear-gradient(to bottom, rgba(2, 6, 17, 0.82) 20%, rgba(2, 6, 17, 0.45) 45%, rgba(2, 6, 17, 0.75) 75%, #020611 100%),
+                url('/hero-mobile.jpg');
+              background-position: center 10%;
+              background-size: 140% auto;
               padding-top: 120px;
-              min-height: auto;
+              padding-bottom: 40px;
+              min-height: 100vh;
+              justify-content: flex-start;
             }
 
             .hero-container {
               padding: 0 20px;
               margin-top: 0;
+              flex-grow: 1;
+              display: flex;
+              align-items: stretch;
             }
 
             .hero-content {
               max-width: 100%;
               text-align: center;
               align-items: center;
+              width: 100%;
+              justify-content: space-between;
+              min-height: calc(100vh - 160px);
+            }
+
+            .hero-top {
+              align-items: center;
+            }
+
+            .hero-bottom {
+              align-items: center;
+              gap: 20px;
             }
 
             .hero-content p {
               margin-inline: auto;
+              font-size: 15px;
+              margin-bottom: 0;
             }
 
             .hero-actions {
               justify-content: center;
               width: 100%;
+              margin-bottom: 0;
             }
 
             .social-proof {
               flex-direction: column;
               gap: 8px;
+            }
+
+            .eyebrow {
+              margin-bottom: 16px;
+              font-size: 10px;
+              padding: 5px 12px;
             }
           }
         `}
@@ -265,28 +302,32 @@ const HeroSection = () => {
 
         <div className="hero-container">
           <div className="hero-content">
-            <div className="eyebrow">
-              <span className="eyebrow-dot"></span>
-              Nouvelle génération
-            </div>
-            <h1>Le crédit vous<br /><span>étouffe ?</span></h1>
-            <p>
-              Droit Habitat transforme la complexité du crédit en solutions concrètes et actionnables.
-            </p>
-            <div className="hero-actions">
-              <button className="btn-primary">
-                Obtenir mon rapport automatisé <ArrowRight size={16} style={{ marginLeft: '8px' }} />
-              </button>
-            </div>
-            <div className="social-proof">
-              <div className="avatar-group">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="User 1" />
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="User 2" />
-                <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=100&q=80" alt="User 3" />
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="User 4" />
+            <div className="hero-top">
+              <div className="eyebrow">
+                <span className="eyebrow-dot"></span>
+                Nouvelle génération
               </div>
-              <div className="social-proof-text">
-                <span>+250 professionnels</span> nous font déjà confiance
+              <h1>Le crédit vous<br /><span>étouffe ?</span></h1>
+              <p>
+                Droit Habitat transforme la complexité du crédit en solutions concrètes et actionnables.
+              </p>
+            </div>
+            <div className="hero-bottom">
+              <div className="hero-actions">
+                <button className="btn-cta" onClick={() => document.getElementById('chat-test')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}>
+                  Faire le test gratuit <ArrowRight size={16} style={{ marginLeft: '8px' }} />
+                </button>
+              </div>
+              <div className="social-proof">
+                <div className="avatar-group">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="User 1" />
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="User 2" />
+                  <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=100&q=80" alt="User 3" />
+                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="User 4" />
+                </div>
+                <div className="social-proof-text">
+                  <span>+250 professionnels</span> nous font déjà confiance
+                </div>
               </div>
             </div>
           </div>

@@ -48,9 +48,9 @@ const SolutionSection = () => {
 
           /* Glowing box borders and shadows */
           .step-icon-box.glow-blue {
-            border-color: rgba(37, 99, 255, 0.35);
-            box-shadow: 0 0 25px rgba(37, 99, 255, 0.15), inset 0 0 12px rgba(37, 99, 255, 0.1);
-            color: #6EA8FF;
+            border-color: rgba(209, 180, 140, 0.35);
+            box-shadow: 0 0 25px rgba(209, 180, 140, 0.15), inset 0 0 12px rgba(209, 180, 140, 0.1);
+            color: #E8D4B8;
           }
 
           .step-icon-box.glow-cyan {
@@ -66,8 +66,8 @@ const SolutionSection = () => {
           }
 
           .process-step:hover .step-icon-box.glow-blue {
-            border-color: rgba(37, 99, 255, 0.6);
-            box-shadow: 0 0 35px rgba(37, 99, 255, 0.3), inset 0 0 15px rgba(37, 99, 255, 0.2);
+            border-color: rgba(209, 180, 140, 0.6);
+            box-shadow: 0 0 35px rgba(209, 180, 140, 0.3), inset 0 0 15px rgba(209, 180, 140, 0.2);
             transform: translateY(-4px);
           }
 
@@ -96,7 +96,7 @@ const SolutionSection = () => {
             margin-bottom: 2px;
           }
 
-          .step-number.blue { color: #6EA8FF; }
+          .step-number.blue { color: #E8D4B8; }
           .step-number.cyan { color: #22D3EE; }
           .step-number.green { color: #4ADE80; }
 
@@ -139,16 +139,44 @@ const SolutionSection = () => {
             .process-wrapper {
               flex-direction: column;
               gap: 40px;
-              align-items: flex-start;
-              padding-left: 10px;
+              align-items: center;
+              padding-left: 0;
             }
 
             .process-step {
               width: 100%;
+              max-width: 400px;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+            }
+
+            .step-info {
+              align-items: center;
             }
 
             .step-connector {
               display: none;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .step-icon-box {
+              width: 52px;
+              height: 52px;
+            }
+
+            .step-icon-box svg {
+              width: 26px;
+              height: 26px;
+            }
+
+            .step-title {
+              font-size: 15px;
+            }
+
+            .step-desc {
+              font-size: 13px;
             }
           }
         `}

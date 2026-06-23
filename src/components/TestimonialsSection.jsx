@@ -195,6 +195,41 @@ const TestimonialsSection = () => {
             .marquee-container::after {
               width: 50px;
             }
+
+            .testimonial-card {
+              width: 320px;
+              padding: 22px;
+            }
+
+            .testimonial-text {
+              font-size: 13px;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .testimonial-card {
+              width: 280px;
+              padding: 20px;
+              border-radius: 16px;
+            }
+
+            .testimonial-text {
+              font-size: 12px;
+              margin-bottom: 18px;
+            }
+
+            .testimonial-avatar {
+              width: 34px;
+              height: 34px;
+            }
+
+            .user-name {
+              font-size: 13px;
+            }
+
+            .user-role {
+              font-size: 10px;
+            }
           }
         `}
       </style>
