@@ -1,6 +1,5 @@
 import React from 'react';
 import { Mail, Phone, ArrowUp } from 'lucide-react';
-import CTASection from './CTASection';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -120,8 +119,6 @@ const Footer = () => {
           }
         `}
       </style>
-
-      <CTASection />
 
       <footer className="footer">
         <div className="container">

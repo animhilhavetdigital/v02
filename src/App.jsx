@@ -7,6 +7,7 @@ import MethodSection from './components/MethodSection'
 import TestimonialsSection from './components/TestimonialsSection'
 import FAQSection from './components/FAQSection'
 import Footer from './components/Footer'
+import CTASection from './components/CTASection'
 import OffersPage from './pages/OffersPage'
 import PaymentPage from './pages/PaymentPage'
 
@@ -20,6 +21,7 @@ const Home = () => {
       <MethodSection />
       <TestimonialsSection />
       <FAQSection />
+      <CTASection />
       <Footer />
     </div>
   )
