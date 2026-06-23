@@ -303,10 +303,6 @@ const HeroSection = () => {
         <div className="hero-container">
           <div className="hero-content">
             <div className="hero-top">
-              <div className="eyebrow">
-                <span className="eyebrow-dot"></span>
-                Nouvelle génération
-              </div>
               <h1>Le crédit vous<br /><span>étouffe ?</span></h1>
               <p>
                 Droit Habitat transforme la complexité du crédit en solutions concrètes et actionnables.

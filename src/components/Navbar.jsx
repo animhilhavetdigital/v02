@@ -131,51 +131,10 @@ const Navbar = () => {
 
           @media (max-width: 768px) {
             .navbar {
-              width: 100%;
-              max-width: 100%;
-              left: 0;
-              right: 0;
-              margin: 0;
-              border-radius: 0;
-              top: 0;
-              height: 60px;
-              padding: 0 24px;
-              gap: 40px;
-              background: rgba(255, 255, 255, 0.5);
-              justify-content: space-between;
-            }
-
-            .nav-brand img {
-              height: 30px;
-            }
-
-            .nav-links {
-              gap: 20px;
-            }
-
-            .nav-links a {
-              font-size: 14px;
-            }
-
-            .mobile-menu {
-              width: 100%;
-              top: 60px;
-              left: 0;
-              right: 0;
-              transform: translateY(-10px);
-              border-radius: 0 0 20px 20px;
-            }
-
-            .mobile-menu.open {
-              transform: translateY(0);
-            }
-          }
-
-          @media (max-width: 520px) {
-            .navbar {
               height: 56px;
-              padding: 0 18px;
-              gap: 32px;
+              padding: 0 24px;
+              gap: 36px;
+              top: 16px;
             }
 
             .nav-brand img {
@@ -183,7 +142,7 @@ const Navbar = () => {
             }
 
             .nav-links {
-              gap: 16px;
+              gap: 18px;
             }
 
             .nav-links a {
@@ -191,14 +150,14 @@ const Navbar = () => {
             }
 
             .mobile-menu {
-              top: 56px;
+              top: 80px;
             }
           }
 
-          @media (max-width: 420px) {
+          @media (max-width: 520px) {
             .navbar {
               height: 52px;
-              padding: 0 16px;
+              padding: 0 18px;
               gap: 24px;
             }
 
@@ -207,7 +166,7 @@ const Navbar = () => {
             }
 
             .nav-links {
-              gap: 12px;
+              gap: 14px;
             }
 
             .nav-links a {
@@ -215,11 +174,35 @@ const Navbar = () => {
             }
 
             .mobile-menu {
-              top: 52px;
+              top: 76px;
             }
           }
 
-          @media (max-width: 360px) {
+          @media (max-width: 400px) {
+            .navbar {
+              height: 48px;
+              padding: 0 16px;
+              gap: 18px;
+            }
+
+            .nav-brand img {
+              height: 24px;
+            }
+
+            .nav-links {
+              gap: 10px;
+            }
+
+            .nav-links a {
+              font-size: 11px;
+            }
+
+            .mobile-menu {
+              top: 72px;
+            }
+          }
+
+          @media (max-width: 340px) {
             .nav-links {
               display: none;
             }
@@ -228,8 +211,8 @@ const Navbar = () => {
               display: flex;
               align-items: center;
               justify-content: center;
-              width: 34px;
-              height: 34px;
+              width: 32px;
+              height: 32px;
               border-radius: 50%;
               background: rgba(209, 180, 140, 0.12);
             }

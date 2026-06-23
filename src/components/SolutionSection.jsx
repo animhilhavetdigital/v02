@@ -194,7 +194,6 @@ const SolutionSection = () => {
                 <BrainCircuit size={32} />
               </div>
               <div className="step-info">
-                <span className="step-number blue">1</span>
                 <h3 className="step-title">Analyse IA 2.0</h3>
                 <p className="step-desc">Notre intelligence artificielle scanne votre contrat et identifie instantanément les failles juridiques exploitables.</p>
               </div>
@@ -207,7 +206,6 @@ const SolutionSection = () => {
                 <TrendingUp size={32} />
               </div>
               <div className="step-info">
-                <span className="step-number cyan">2</span>
                 <h3 className="step-title">98% Taux de réussite</h3>
                 <p className="step-desc">Pour les dossiers jugés éligibles par notre système, nous constatons un taux de succès exceptionnel (+12% par rapport à la moyenne).</p>
               </div>
@@ -220,7 +218,6 @@ const SolutionSection = () => {
                 <CheckCircle size={32} />
               </div>
               <div className="step-info">
-                <span className="step-number green">3</span>
                 <h3 className="step-title">Expert : Dossier éligible</h3>
                 <p className="step-desc">Obtenez une réponse claire et ferme sur la viabilité de votre dossier avant même d'engager la moindre démarche.</p>
               </div>
